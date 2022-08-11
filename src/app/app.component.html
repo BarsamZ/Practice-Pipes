@@ -1,0 +1,21 @@
+<!-- <p>{{a | percent:'2.1-2' }}</p>
+<p>{{b | currency:'CAD':'symbol-narrow'}}</p> -->
+
+<!-- <p>{{name1 | uppercase}}</p> -->
+
+<!-- <p>{{name1 | shorten:8}}</p>
+<p>{{name2 | shorten:3}}</p>
+<p>{{d | date:'d/M/y'}}</p> -->
+
+<p>Username:{{username | async}}</p>
+<br>
+<input type="text" [(ngModel)]="filterString">
+<hr>
+<button type="button" (click)="addCoffee()">Add Coffee</button>
+<div>
+ <h4 *ngFor="let item of grocery | filter:filterString:'condition'">
+  {{item.name}}
+  <span class="badge badge-warning">{{item.condition}}</span>
+</h4> 
+</div>
+
